@@ -22,7 +22,7 @@
 ## ✨ Why Choose Us?
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x400/007AFF/ffffff?text=OpenCode+iOS+Simulator+Workflow" alt="Workflow" width="800"/>
+  <img src="images/cover.png" alt="OpenCode iOS Simulator" width="800"/>
 </p>
 
 | Traditional Way | Using Our Tool |
