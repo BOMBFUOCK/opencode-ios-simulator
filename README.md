@@ -3,7 +3,7 @@
 
 # 🚀 OpenCode iOS Simulator
 
-<i>AI 时代的 iOS 模拟器自动化命令行工具</i>
+<i>iOS Simulator Automation CLI Tool for the AI Era</i>
 
 [![PyPI Version](https://img.shields.io/pypi/v/opencode-ios-simulator?style=flat&color=blue)](https://pypi.org/project/opencode-ios-simulator/)
 [![Python Version](https://img.shields.io/python/py-versions/opencode-ios-simulator?style=flat)](https://pypi.org/project/opencode-ios-simulator/)
@@ -13,86 +13,86 @@
 
 ---
 
-[English](README.md) | [中文](README_CN.md)
+[English](README.md) | [中文](README_zh.md)
 
 </div>
 
 ---
 
-## ✨ 为什么选择我们?
+## ✨ Why Choose Us?
 
 <p align="center">
   <img src="https://via.placeholder.com/800x400/007AFF/ffffff?text=OpenCode+iOS+Simulator+Workflow" alt="Workflow" width="800"/>
 </p>
 
-| 传统方式 | 使用我们的工具 |
-|---------|---------------|
-| ❌ 手动点击每个按钮 | ✅ 一行命令完成操作 |
-| ❌ 重复性工作浪费生命 | ✅ 自动化批量处理 |
-| ❌ 需要学习复杂 API | ✅ 简单 CLI，上手即用 |
-| ❌ 难以集成到 CI/CD | ✅ 完美支持自动化流程 |
+| Traditional Way | Using Our Tool |
+|-----------------|----------------|
+| ❌ Manual button clicking | ✅ One command does it all |
+| ❌ Repetitive waste of time | ✅ Automated batch processing |
+| ❌ Complex API learning curve | ✅ Simple CLI, ready to use |
+| ❌ Hard to integrate with CI/CD | ✅ Perfect automation support |
 
 ---
 
-## 🎯 核心特性
+## 🎯 Key Features
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                                                                 │
-│   📱 设备管理           🧪 测试分析           🔧 构建工具        │
-│   ┌───────────┐        ┌───────────┐        ┌───────────┐     │
-│   │ sim list  │        │ sim audit │        │ sim build │     │
-│   │ sim boot  │        │ sim diff  │        │ sim test  │     │
-│   │ sim create│        │ sim log   │        │           │     │
-│   └───────────┘        └───────────┘        └───────────┘     │
+│   📱 Device Management    🧪 Test Analysis    🔧 Build Tools  │
+│   ┌───────────┐          ┌───────────┐        ┌───────────┐   │
+│   │ sim list  │          │ sim audit │        │ sim build │   │
+│   │ sim boot  │          │ sim diff  │        │ sim test  │   │
+│   │ sim create│          │ sim log   │        │           │   │
+│   └───────────┘          └───────────┘        └───────────┘   │
 │                                                                 │
-│   🎨 屏幕交互           🔐 权限管理           📊 状态捕获       │
-│   ┌───────────┐        ┌───────────┐        ┌───────────┐     │
-│   │ sim tap   │        │sim privacy│        │ sim state │     │
-│   │ sim swipe │        │sim push   │        │ sim tree  │     │
-│   │ sim text  │        │sim clipboard       │ sim map   │     │
-│   └───────────┘        └───────────┘        └───────────┘     │
+│   🎨 Screen Interaction  🔐 Privacy Manager  📊 State Capture │
+│   ┌───────────┐          ┌───────────┐        ┌───────────┐   │
+│   │ sim tap   │          │sim privacy│        │ sim state │   │
+│   │ sim swipe │          │sim push   │        │ sim tree  │   │
+│   │ sim text  │          │sim clipboard       │ sim map   │   │
+│   └───────────┘          └───────────┘        └───────────┘   │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### 🔥 独特优势
+### 🔥 Unique Advantages
 
-- 🤖 **AI 原生设计** - 专为 AI Agent 打造的自动化工具
-- ⚡ **极速上手** - 5 分钟内完成安装配置
-- 🔄 **全面自动化** - 覆盖 iOS 模拟器全生命周期
-- 🎪 **无障碍优先** - 基于 Accessibility API，稳定可靠
-- 📦 **开箱即用** - 无需复杂配置，立即投入生产
+- 🤖 **AI-Native Design** - Built specifically for AI Agent automation
+- ⚡ **Quick Setup** - Install and configure in 5 minutes
+- 🔄 **Full Automation** - Complete iOS simulator lifecycle coverage
+- 🎪 **Accessibility-First** - Stable and reliable based on Accessibility API
+- 📦 **Ready to Use** - No complex config, production-ready out of the box
 
 ---
 
-## 🏗️ 架构图
+## 🏗️ Architecture
 
 ```mermaid
 graph TB
-    subgraph 用户层
-        CLI[CLI 命令行]
+    subgraph User Layer
+        CLI[CLI Commands]
         AI[AI Agent]
-        CI[CI/CD 流水线]
+        CI[CI/CD Pipeline]
     end
     
-    subgraph 核心引擎
+    subgraph Core Engine
         XCMD[xcrun/simctl]
         IDB[idb-companion]
         AX[Accessibility API]
     end
     
-    subgraph 功能模块
-        DM[设备管理]
-        AM[应用管理]
-        SI[屏幕交互]
-        TA[测试分析]
-        PM[权限管理]
+    subgraph Functional Modules
+        DM[Device Management]
+        AM[App Management]
+        SI[Screen Interaction]
+        TA[Test Analysis]
+        PM[Privacy Management]
     end
     
-    subgraph 目标设备
-        SIM[iOS 模拟器]
-        APP[待测应用]
+    subgraph Target Device
+        SIM[iOS Simulator]
+        APP[App Under Test]
     end
     
     CLI --> DM
@@ -113,108 +113,196 @@ graph TB
 
 ---
 
-## 📦 安装
+## 📦 Installation
 
 ```bash
-# 1️⃣ 安装 idb-companion (必需)
+# 1️⃣ Install idb-companion (required)
 brew install idb-companion
 
-# 2️⃣ 安装 opencode-ios-simulator
+# 2️⃣ Install opencode-ios-simulator
 pip install --upgrade opencode-ios-simulator
 
-# 3️⃣ 验证安装
+# 3️⃣ Verify installation
 sim check
 ```
 
 ---
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
 ```bash
-# 检查环境 ✅
+# Check environment ✅
 sim check
 
-# 启动模拟器 📱
+# Boot simulator 📱
 sim boot "iPhone 17 Pro"
 
-# 安装应用 📦
+# Install app 📦
 sim install app.ipa
 
-# 启动应用 ▶️
+# Launch app ▶️
 sim launch com.example.myapp
 
-# 映射屏幕元素 🗺️
+# Map screen elements 🗺️
 sim map
 
-# 点击按钮 👆
-sim tap --text "确认"
+# Tap button 👆
+sim tap --text "Confirm"
 
-# 输入文本 ✍️
+# Input text ✍️
 sim text "hello world"
 
-# 滑动操作 👋
+# Swipe 👋
 sim swipe up
 
-# 关闭模拟器 ⏹️
+# Shutdown simulator ⏹️
 sim shutdown
 ```
 
 ---
 
-## 📸 效果展示
+## 📸 Demo
 
-### 屏幕映射
+### Screen Mapping
 ```
 ┌─────────────────────────────────────┐
-│ 📱 iPhone 17 Pro - 主屏幕           │
+│ 📱 iPhone 17 Pro - Home Screen      │
 ├─────────────────────────────────────┤
 │ ┌─────────────────────────────────┐ │
-│ │ ⚙️ 设置                    [≣] │ │
+│ │ ⚙️ Settings               [≣] │ │
 │ ├─────────────────────────────────┤ │
-│ │ 🔍 搜索设置...                  │ │
+│ │ 🔍 Search Settings...          │ │
 │ ├─────────────────────────────────┤ │
-│ │ 👤 Apple ID                     │ │
-│ │ 📶 Wi-Fi                        │ │
-│ │ 🔔 通知                         │ │
-│ │ 🔊 声音与触感                   │ │
-│ │ 🌙 显示与亮度                   │ │
+│ │ 👤 Apple ID                    │ │
+│ │ 📶 Wi-Fi                       │ │
+│ │ 🔔 Notifications              │ │
+│ │ 🔊 Sounds & Haptics           │ │
+│ │ 🌙 Display & Brightness       │ │
 │ └─────────────────────────────────┘ │
 └─────────────────────────────────────┘
 ```
 
-### 环境检查
+### Environment Check
 ```
-✓ macOS 26.2        - 正常
-✓ Xcode 18.3        - 已安装
-✓ simctl            - 可用
-✓ idb-companion     - 已连接
-✓ Python 3.12       - 就绪
+✓ macOS 26.2        - OK
+✓ Xcode 18.3        - Installed
+✓ simctl            - Available
+✓ idb-companion     - Connected
+✓ Python 3.12       - Ready
 
-🎉 环境配置完成！
+🎉 Environment ready!
 ```
 
 ---
 
-## 📋 命令一览
+## 📋 Command Reference
 
-| 分类 | 命令 | 说明 |
-|------|------|------|
-| 🔰 基础 | `sim check` | 检查环境配置 |
-| 📱 设备 | `sim list` | 列出模拟器 |
-| 📱 设备 | `sim boot` | 启动模拟器 |
-| 📱 设备 | `sim shutdown` | 关闭模拟器 |
-| 📦 应用 | `sim install` | 安装应用 |
-| 📦 应用 | `sim launch` | 启动应用 |
-| 👆 交互 | `sim tap` | 点击元素 |
-| 👆 交互 | `sim swipe` | 滑动屏幕 |
-| 👆 交互 | `sim text` | 输入文本 |
-| 🧪 测试 | `sim audit` | 无障碍审计 |
-| 🧪 测试 | `sim diff` | 视觉对比 |
-| 🔐 权限 | `sim privacy` | 权限管理 |
+| Category | Command | Description |
+|----------|---------|-------------|
+| 🔰 Basics | `sim check` | Check environment |
+| 📱 Device | `sim list` | List simulators |
+| 📱 Device | `sim boot` | Boot simulator |
+| 📱 Device | `sim shutdown` | Shutdown simulator |
+| 📦 App | `sim install` | Install app |
+| 📦 App | `sim launch` | Launch app |
+| 👆 Interaction | `sim tap` | Tap element |
+| 👆 Interaction | `sim swipe` | Swipe screen |
+| 👆 Interaction | `sim text` | Input text |
+| 🧪 Testing | `sim audit` | Accessibility audit |
+| 🧪 Testing | `sim diff` | Visual diff |
+| 🔐 Privacy | `sim privacy` | Privacy settings |
 
 ---
 
-## 🤝 贡献者
+## 📋 Full Command List
+
+### Device Lifecycle (6)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim list` | List simulators | `sim list --state booted` |
+| `sim boot` | Boot simulator | `sim boot "iPhone 17 Pro"` |
+| `sim shutdown` | Shutdown simulator | `sim shutdown` |
+| `sim create` | Create simulator | `sim create "iPhone 17 Pro" --ios 26.3` |
+| `sim delete` | Delete simulator | `sim delete --udid XXX --force` |
+| `sim erase` | Erase simulator | `sim erase` |
+
+### App Management (4)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim launch` | Launch app | `sim launch com.apple.Preferences` |
+| `sim terminate` | Terminate app | `sim terminate com.apple.Preferences` |
+| `sim install` | Install app | `sim install app.ipa` |
+| `sim uninstall` | Uninstall app | `sim uninstall com.app` |
+
+### Navigation & Interaction (5)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim map` | Map screen elements | `sim map` |
+| `sim tree` | Accessibility tree | `sim tree` |
+| `sim tap` | Tap element | `sim tap --text "General"` |
+| `sim text` | Input text | `sim text "hello"` |
+| `sim swipe` | Swipe | `sim swipe up` |
+
+### Advanced Interaction (2)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim key` | Press key | `sim key return` |
+| `sim button` | Hardware button | `sim button home` |
+
+### Testing & Analysis (4)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim audit` | Accessibility audit | `sim audit` |
+| `sim diff` | Visual diff | `sim diff base.png curr.png` |
+| `sim log` | Log monitoring | `sim log --app com.app` |
+| `sim state` | State capture | `sim state` |
+
+### Privacy & Settings (4)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim privacy` | Privacy settings | `sim privacy --grant camera --bundle-id com.app` |
+| `sim push` | Push notification | `sim push --title "Hi" --body "Hello"` |
+| `sim clipboard` | Clipboard | `sim clipboard "text"` |
+| `sim statusbar` | Status bar | `sim statusbar --get` |
+
+### Build (2)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim build` | Build project | `sim build --project App.xcodeproj` |
+| `sim test` | Run tests | `sim test --project App.xcodeproj` |
+
+### Info (2)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim check` | Environment check | `sim check` |
+| `sim booted` | Booted devices | `sim booted` |
+
+---
+
+## 🔧 JSON Output
+
+All commands support `--json`:
+
+```bash
+sim list --json
+# {"simulators": [...], "count": 11}
+
+sim check --json
+# {"ready": true, "checks": {...}}
+```
+
+---
+
+## 📦 Dependencies
+
+- macOS + Xcode
+- idb-companion (`brew install idb-companion`)
+- Python 3.10+
+- Pillow (for visual diff)
+
+---
+
+## 🤝 Contributors
 
 <!-- CONTRIBUTORS -->
 <p align="center">
@@ -224,28 +312,28 @@ sim shutdown
 </p>
 
 <p align="center">
-  <strong>BOMBFUOCK</strong> - 创始人 & 主要维护者
+  <strong>BOMBFUOCK</strong> - Founder & Main Maintainer
 </p>
 
 ---
 
-## 📄 许可证
+## 📄 License
 
-MIT License - 查看 [LICENSE](LICENSE) 了解详情
+MIT License - See [LICENSE](LICENSE) for details
 
 ---
 
-## 🙏 感谢
+## 🙏 Acknowledgements
 
 - [Apple](https://apple.com) - Xcode & Simulator
-- [OpenCode](https://opencode.ai) - AI 编程助手
-- [idb-companion](https://github.com/facebook/idb) - iOS 自动化基础设施
+- [OpenCode](https://opencode.ai) - AI Coding Assistant
+- [idb-companion](https://github.com/facebook/idb) - iOS Automation Infrastructure
 
 ---
 
 <div align="center">
 
-**⭐ 如果这个项目对你有帮助，请给我们一个 Star！**
+**⭐ If this project helps you, please give us a Star!**
 
 [![GitHub Stars](https://img.shields.io/github/stars/BOMBFUOCK/opencode-ios-simulator?style=social)](https://github.com/BOMBFUOCK/opencode-ios-simulator)
 
