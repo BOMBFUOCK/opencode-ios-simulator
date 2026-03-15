@@ -1,19 +1,18 @@
-# iOS Simulator Skill
+# Opencode iOS Simulator
 
-iOS Simulator automation CLI tool.
+Unified CLI tool for iOS Simulator automation, designed for AI agents and automation workflows.
 
 ## Installation
 
 ```bash
 # Install via pip
-pip install --upgrade ios-simulator-skill
+pip install --upgrade opencode-ios-simulator
 
 # Or install in development mode
-cd ios-simulator-opencode-skill
 pip install -e .
 ```
 
-## Usage
+## Quick Start
 
 ```bash
 # Check environment
@@ -43,37 +42,66 @@ sim swipe up
 
 ## Commands
 
+### Device Lifecycle (6)
 | Command | Description | Example |
 |---------|-------------|---------|
-| `list` | List simulators | `list --state booted` |
-| `boot` | Boot simulator | `boot "iPhone 17 Pro"` |
-| `shutdown` | Shutdown simulator | `shutdown --udid XXX` |
-| `create` | Create simulator | `create "iPhone 17 Pro" --ios 26.3` |
-| `delete` | Delete simulator | `delete --udid XXX --force` |
-| `erase` | Erase simulator | `erase` |
-| `launch` | Launch app | `launch com.example.app` |
-| `terminate` | Terminate app | `terminate com.example.app` |
-| `install` | Install app | `install app.ipa` |
-| `uninstall` | Uninstall app | `uninstall com.app` |
-| `map` | Map screen | `map` |
-| `tree` | Accessibility tree | `tree --json` |
-| `tap` | Tap element | `tap --text "Button"` |
-| `text` | Enter text | `text "hello"` |
-| `swipe` | Swipe gesture | `swipe up` |
-| `key` | Press key | `key return` |
-| `button` | Hardware button | `button home` |
-| `audit` | Accessibility audit | `audit` |
-| `diff` | Visual diff | `diff base.png curr.png` |
-| `log` | Monitor logs | `log --app com.app` |
-| `state` | Capture state | `state` |
-| `privacy` | Manage permissions | `privacy --bundle-id com.app --grant camera` |
-| `push` | Push notification | `push --title "Hi" --body "Hello"` |
-| `clipboard` | Set clipboard | `clipboard "text"` |
-| `statusbar` | Status bar | `statusbar --get` |
-| `build` | Build project | `build --project App.xcodeproj` |
-| `test` | Run tests | `test --project App.xcodeproj` |
-| `check` | Check environment | `check` |
-| `booted` | Get booted device | `booted` |
+| `sim list` | List simulators | `sim list --state booted` |
+| `sim boot` | Boot simulator | `sim boot "iPhone 17 Pro"` |
+| `sim shutdown` | Shutdown simulator | `sim shutdown` |
+| `sim create` | Create simulator | `sim create "iPhone 17 Pro" --ios 26.3` |
+| `sim delete` | Delete simulator | `sim delete --udid XXX --force` |
+| `sim erase` | Erase simulator | `sim erase` |
+
+### App Management (4)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim launch` | Launch app | `sim launch com.apple.Preferences` |
+| `sim terminate` | Terminate app | `sim terminate com.apple.Preferences` |
+| `sim install` | Install app | `sim install app.ipa` |
+| `sim uninstall` | Uninstall app | `sim uninstall com.app` |
+
+### Navigation & Interaction (5)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim map` | Map screen elements | `sim map` |
+| `sim tree` | Accessibility tree | `sim tree` |
+| `sim tap` | Tap element | `sim tap --text "General"` |
+| `sim text` | Enter text | `sim text "hello"` |
+| `sim swipe` | Swipe | `sim swipe up` |
+
+### Advanced Interaction (2)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim key` | Press key | `sim key return` |
+| `sim button` | Hardware button | `sim button home` |
+
+### Testing & Analysis (4)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim audit` | Accessibility audit | `sim audit` |
+| `sim diff` | Visual diff | `sim diff base.png curr.png` |
+| `sim log` | Monitor logs | `sim log --app com.app` |
+| `sim state` | Capture state | `sim state` |
+
+### Permissions & Settings (4)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim privacy` | Manage permissions | `sim privacy --grant camera --bundle-id com.app` |
+| `sim push` | Push notification | `sim push --title "Hi" --body "Hello"` |
+| `sim clipboard` | Clipboard | `sim clipboard "text"` |
+| `sim statusbar` | Status bar | `sim statusbar --get` |
+
+### Build (2)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim build` | Build project | `sim build --project App.xcodeproj` |
+| `sim test` | Run tests | `sim test --project App.xcodeproj` |
+
+### Info (2)
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sim check` | Environment check | `sim check` |
+| `sim booted` | Booted device | `sim booted` |
 
 ## JSON Output
 
@@ -81,7 +109,7 @@ All commands support `--json`:
 
 ```bash
 sim list --json
-# {"simulators": [...], "count": 10}
+# {"simulators": [...], "count": 11}
 
 sim check --json
 # {"ready": true, "checks": {...}}
@@ -91,5 +119,5 @@ sim check --json
 
 - macOS + Xcode
 - idb-companion (`brew install idb-companion`)
-- Python 3
+- Python 3.10+
 - Pillow (for visual_diff)
