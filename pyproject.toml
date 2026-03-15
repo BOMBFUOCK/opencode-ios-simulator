@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ios-simulator-skill"
+version = "1.0.0"
+description = "iOS Simulator Automation CLI for AI Agents"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "OpenCode", email = "opencode@example.com"}
+]
+keywords = ["ios", "simulator", "automation", "idb", "xcrun", "testing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Testing",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pillow>=9.0.0",
+]
+
+[project.scripts]
+sim = "ios_simulator_skill.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/your-github/ios-simulator-skill"
+Repository = "https://github.com/your-github/ios-simulator-skill"
+Issues = "https://github.com/your-github/ios-simulator-skill/issues"
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ios_simulator_skill*"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
