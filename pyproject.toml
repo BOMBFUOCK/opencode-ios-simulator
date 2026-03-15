@@ -5,16 +5,17 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "opencode-ios-simulator"
 version = "1.0.0"
-description = "iOS Simulator Automation CLI for AI Agents"
+description = "🤖 AI 时代的 iOS 模拟器自动化命令行工具 - 专为 AI Agent 和自动化工作流设计"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "OpenCode", email = "opencode@example.com"}
+    {name = "BOMBFUOCK", email = "bombfuock@example.com"}
 ]
-keywords = ["ios", "simulator", "automation", "idb", "xcrun", "testing"]
+keywords = ["ios", "simulator", "automation", "idb", "xcrun", "testing", "ai", "agent", "opencode", "mobile", "appium", "自动化测试"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
     "License :: OSI Approved :: MIT License",
     "Operating System :: MacOS",
     "Programming Language :: Python :: 3",
@@ -22,6 +23,9 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Utilities",
+    "Artificial Intelligence :: Testing",
 ]
 requires-python = ">=3.10"
 dependencies = [
@@ -32,12 +36,17 @@ dependencies = [
 sim = "opencode_ios_simulator.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/opencode-ai/opencode-ios-simulator"
-Repository = "https://github.com/opencode-ai/opencode-ios-simulator"
-Issues = "https://github.com/opencode-ai/opencode-ios-simulator/issues"
+Homepage = "https://github.com/BOMBFUOCK/opencode-ios-simulator"
+Repository = "https://github.com/BOMBFUOCK/opencode-ios-simulator"
+Issues = "https://github.com/BOMBFUOCK/opencode-ios-simulator/issues"
+Download = "https://github.com/BOMBFUOCK/opencode-ios-simulator/releases"
 
 [project.optional-dependencies]
 dev = [
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+all = [
     "black>=23.0.0",
     "ruff>=0.1.0",
 ]

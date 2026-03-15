@@ -1,313 +1,254 @@
-# Opencode iOS Simulator
+<!-- PROJECT BADGES -->
+<div align="center">
 
-iOS 模拟器自动化 CLI 工具，专为 AI Agent 和自动化工作流设计。
+# 🚀 OpenCode iOS Simulator
 
-## 项目简介
+<i>AI 时代的 iOS 模拟器自动化命令行工具</i>
 
-Opencode iOS Simulator 是一个功能强大的命令行工具，用于自动化控制 iOS 模拟器。它提供了丰富的命令集，支持设备生命周期管理、应用安装与启动、屏幕交互、无障碍测试等功能。
+[![PyPI Version](https://img.shields.io/pypi/v/opencode-ios-simulator?style=flat&color=blue)](https://pypi.org/project/opencode-ios-simulator/)
+[![Python Version](https://img.shields.io/python/py-versions/opencode-ios-simulator?style=flat)](https://pypi.org/project/opencode-ios-simulator/)
+[![macOS Support](https://img.shields.io/badge/support-macOS-orange?style=flat)](#)
+[![License](https://img.shields.io/pypi/l/opencode-ios-simulator?style=flat&color=green)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/BOMBFUOCK/opencode-ios-simulator?style=flat&color=yellow)](https://github.com/BOMBFUOCK/opencode-ios-simulator/stargazers)
 
-该工具特别设计用于：
-- **AI Agent 自动化**：为 AI 代理提供可靠的 iOS 模拟器控制能力
-- **自动化测试**：简化 iOS 应用的测试流程
-- **CI/CD 集成**：支持在持续集成环境中运行
-- **开发调试**：帮助开发者快速调试 iOS 应用
+---
 
-## 功能特性
+[English](README.md) | [中文](README_CN.md)
 
-### 设备管理
-- 列出、创建、删除模拟器
-- 启动、关闭、重置模拟器
-- 多设备状态管理
+</div>
 
-### 应用管理
-- 安装 IPA 应用
-- 启动、终止应用
-- 卸载应用
+---
 
-### 屏幕交互
-- 映射屏幕元素（Accessibility Tree）
-- 点击指定元素
-- 输入文本
-- 滑动操作（上、下、左、右）
-- 硬件按钮模拟（Home、Power 等）
-- 按键模拟
+## ✨ 为什么选择我们?
 
-### 测试与分析
-- 无障碍审计
-- 视觉差异对比
-- 应用日志监控
-- 状态捕获
+<p align="center">
+  <img src="https://via.placeholder.com/800x400/007AFF/ffffff?text=OpenCode+iOS+Simulator+Workflow" alt="Workflow" width="800"/>
+</p>
 
-### 权限与设置
-- 权限管理（相机、麦克风、位置等）
-- 推送通知模拟
-- 剪贴板操作
-- 状态栏控制
+| 传统方式 | 使用我们的工具 |
+|---------|---------------|
+| ❌ 手动点击每个按钮 | ✅ 一行命令完成操作 |
+| ❌ 重复性工作浪费生命 | ✅ 自动化批量处理 |
+| ❌ 需要学习复杂 API | ✅ 简单 CLI，上手即用 |
+| ❌ 难以集成到 CI/CD | ✅ 完美支持自动化流程 |
 
-### 构建与测试
-- Xcode 项目构建
-- 单元测试运行
+---
 
-## 安装
+## 🎯 核心特性
 
-### 环境要求
-
-- macOS 操作系统
-- Xcode（已安装命令行工具）
-- Python 3.10+
-- idb-companion
-
-### 安装步骤
-
-1. **安装 idb-companion**（必需）：
-
-```bash
-brew install idb-companion
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│   📱 设备管理           🧪 测试分析           🔧 构建工具        │
+│   ┌───────────┐        ┌───────────┐        ┌───────────┐     │
+│   │ sim list  │        │ sim audit │        │ sim build │     │
+│   │ sim boot  │        │ sim diff  │        │ sim test  │     │
+│   │ sim create│        │ sim log   │        │           │     │
+│   └───────────┘        └───────────┘        └───────────┘     │
+│                                                                 │
+│   🎨 屏幕交互           🔐 权限管理           📊 状态捕获       │
+│   ┌───────────┐        ┌───────────┐        ┌───────────┐     │
+│   │ sim tap   │        │sim privacy│        │ sim state │     │
+│   │ sim swipe │        │sim push   │        │ sim tree  │     │
+│   │ sim text  │        │sim clipboard       │ sim map   │     │
+│   └───────────┘        └───────────┘        └───────────┘     │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-2. **安装 opencode-ios-simulator**：
+### 🔥 独特优势
+
+- 🤖 **AI 原生设计** - 专为 AI Agent 打造的自动化工具
+- ⚡ **极速上手** - 5 分钟内完成安装配置
+- 🔄 **全面自动化** - 覆盖 iOS 模拟器全生命周期
+- 🎪 **无障碍优先** - 基于 Accessibility API，稳定可靠
+- 📦 **开箱即用** - 无需复杂配置，立即投入生产
+
+---
+
+## 🏗️ 架构图
+
+```mermaid
+graph TB
+    subgraph 用户层
+        CLI[CLI 命令行]
+        AI[AI Agent]
+        CI[CI/CD 流水线]
+    end
+    
+    subgraph 核心引擎
+        XCMD[xcrun/simctl]
+        IDB[idb-companion]
+        AX[Accessibility API]
+    end
+    
+    subgraph 功能模块
+        DM[设备管理]
+        AM[应用管理]
+        SI[屏幕交互]
+        TA[测试分析]
+        PM[权限管理]
+    end
+    
+    subgraph 目标设备
+        SIM[iOS 模拟器]
+        APP[待测应用]
+    end
+    
+    CLI --> DM
+    AI --> DM
+    CI --> DM
+    
+    DM --> XCMD
+    AM --> XCMD
+    SI --> IDB
+    TA --> AX
+    
+    XCMD --> SIM
+    IDB --> SIM
+    AX --> APP
+    
+    SIM --> APP
+```
+
+---
+
+## 📦 安装
 
 ```bash
-# 通过 pip 安装
+# 1️⃣ 安装 idb-companion (必需)
+brew install idb-companion
+
+# 2️⃣ 安装 opencode-ios-simulator
 pip install --upgrade opencode-ios-simulator
 
-# 或开发模式安装
-pip install -e .
-```
-
-### 验证安装
-
-```bash
-# 检查环境配置
+# 3️⃣ 验证安装
 sim check
 ```
 
-## 使用示例
+---
 
-### 快速开始
+## 🚀 快速开始
 
 ```bash
-# 检查环境
+# 检查环境 ✅
 sim check
 
-# 列出所有模拟器
-sim list
-
-# 启动模拟器
+# 启动模拟器 📱
 sim boot "iPhone 17 Pro"
 
-# 启动应用
-sim launch com.apple.Preferences
+# 安装应用 📦
+sim install app.ipa
 
-# 映射屏幕元素
+# 启动应用 ▶️
+sim launch com.example.myapp
+
+# 映射屏幕元素 🗺️
 sim map
 
-# 点击元素
-sim tap --text "通用"
+# 点击按钮 👆
+sim tap --text "确认"
 
-# 输入文本
-sim text "hello"
+# 输入文本 ✍️
+sim text "hello world"
 
-# 滑动操作
+# 滑动操作 👋
 sim swipe up
 
-# 关闭模拟器
+# 关闭模拟器 ⏹️
 sim shutdown
 ```
 
-### 设备管理示例
+---
 
-```bash
-# 列出已启动的模拟器
-sim list --state booted
+## 📸 效果展示
 
-# 创建新模拟器
-sim create "iPhone 17 Pro" --ios 26.3
-
-# 删除模拟器
-sim delete --udid <UDID> --force
-
-# 重置模拟器
-sim erase
+### 屏幕映射
+```
+┌─────────────────────────────────────┐
+│ 📱 iPhone 17 Pro - 主屏幕           │
+├─────────────────────────────────────┤
+│ ┌─────────────────────────────────┐ │
+│ │ ⚙️ 设置                    [≣] │ │
+│ ├─────────────────────────────────┤ │
+│ │ 🔍 搜索设置...                  │ │
+│ ├─────────────────────────────────┤ │
+│ │ 👤 Apple ID                     │ │
+│ │ 📶 Wi-Fi                        │ │
+│ │ 🔔 通知                         │ │
+│ │ 🔊 声音与触感                   │ │
+│ │ 🌙 显示与亮度                   │ │
+│ └─────────────────────────────────┘ │
+└─────────────────────────────────────┘
 ```
 
-### 应用管理示例
+### 环境检查
+```
+✓ macOS 26.2        - 正常
+✓ Xcode 18.3        - 已安装
+✓ simctl            - 可用
+✓ idb-companion     - 已连接
+✓ Python 3.12       - 就绪
 
-```bash
-# 安装应用
-sim install app.ipa
-
-# 启动应用
-sim launch com.apple.Preferences
-
-# 终止应用
-sim terminate com.apple.Preferences
-
-# 卸载应用
-sim uninstall com.app
+🎉 环境配置完成！
 ```
 
-### 交互操作示例
+---
 
-```bash
-# 获取无障碍树
-sim tree
+## 📋 命令一览
 
-# 点击按钮
-sim tap --text "确认"
-
-# 输入文本
-sim text "用户名"
-
-# 滑动屏幕
-sim swipe down
-
-# 按下按键
-sim key return
-
-# 硬件按钮
-sim button home
-```
-
-### 测试与分析示例
-
-```bash
-# 无障碍审计
-sim audit
-
-# 视觉差异对比
-sim diff base.png curr.png
-
-# 监控应用日志
-sim log --app com.app
-
-# 捕获当前状态
-sim state
-```
-
-### 权限与设置示例
-
-```bash
-# 授予权限
-sim privacy --grant camera --bundle-id com.app
-
-# 发送推送通知
-sim push --title "提醒" --body "您有新消息"
-
-# 复制文本到剪贴板
-sim clipboard "文本内容"
-
-# 获取状态栏信息
-sim statusbar --get
-```
-
-### 构建示例
-
-```bash
-# 构建项目
-sim build --project App.xcodeproj
-
-# 运行测试
-sim test --project App.xcodeproj
-```
-
-## 命令列表
-
-### 设备生命周期 (6)
-
-| 命令 | 说明 | 示例 |
+| 分类 | 命令 | 说明 |
 |------|------|------|
-| `sim list` | 列出模拟器 | `sim list --state booted` |
-| `sim boot` | 启动模拟器 | `sim boot "iPhone 17 Pro"` |
-| `sim shutdown` | 关闭模拟器 | `sim shutdown` |
-| `sim create` | 创建模拟器 | `sim create "iPhone 17 Pro" --ios 26.3` |
-| `sim delete` | 删除模拟器 | `sim delete --udid XXX --force` |
-| `sim erase` | 重置模拟器 | `sim erase` |
+| 🔰 基础 | `sim check` | 检查环境配置 |
+| 📱 设备 | `sim list` | 列出模拟器 |
+| 📱 设备 | `sim boot` | 启动模拟器 |
+| 📱 设备 | `sim shutdown` | 关闭模拟器 |
+| 📦 应用 | `sim install` | 安装应用 |
+| 📦 应用 | `sim launch` | 启动应用 |
+| 👆 交互 | `sim tap` | 点击元素 |
+| 👆 交互 | `sim swipe` | 滑动屏幕 |
+| 👆 交互 | `sim text` | 输入文本 |
+| 🧪 测试 | `sim audit` | 无障碍审计 |
+| 🧪 测试 | `sim diff` | 视觉对比 |
+| 🔐 权限 | `sim privacy` | 权限管理 |
 
-### 应用管理 (4)
+---
 
-| 命令 | 说明 | 示例 |
-|------|------|------|
-| `sim launch` | 启动应用 | `sim launch com.apple.Preferences` |
-| `sim terminate` | 终止应用 | `sim terminate com.apple.Preferences` |
-| `sim install` | 安装应用 | `sim install app.ipa` |
-| `sim uninstall` | 卸载应用 | `sim uninstall com.app` |
+## 🤝 贡献者
 
-### 导航与交互 (5)
+<!-- CONTRIBUTORS -->
+<p align="center">
+  <a href="https://github.com/BOMBFUOCK">
+    <img src="https://avatars.githubusercontent.com/u/94738020?v=4" width="64" height="64" alt="BOMBFUOCK"/>
+  </a>
+</p>
 
-| 命令 | 说明 | 示例 |
-|------|------|------|
-| `sim map` | 映射屏幕元素 | `sim map` |
-| `sim tree` | 无障碍树 | `sim tree` |
-| `sim tap` | 点击元素 | `sim tap --text "通用"` |
-| `sim text` | 输入文本 | `sim text "hello"` |
-| `sim swipe` | 滑动 | `sim swipe up` |
+<p align="center">
+  <strong>BOMBFUOCK</strong> - 创始人 & 主要维护者
+</p>
 
-### 高级交互 (2)
+---
 
-| 命令 | 说明 | 示例 |
-|------|------|------|
-| `sim key` | 按键 | `sim key return` |
-| `sim button` | 硬件按钮 | `sim button home` |
+## 📄 许可证
 
-### 测试与分析 (4)
+MIT License - 查看 [LICENSE](LICENSE) 了解详情
 
-| 命令 | 说明 | 示例 |
-|------|------|------|
-| `sim audit` | 无障碍审计 | `sim audit` |
-| `sim diff` | 视觉对比 | `sim diff base.png curr.png` |
-| `sim log` | 日志监控 | `sim log --app com.app` |
-| `sim state` | 状态捕获 | `sim state` |
+---
 
-### 权限与设置 (4)
+## 🙏 感谢
 
-| 命令 | 说明 | 示例 |
-|------|------|------|
-| `sim privacy` | 权限管理 | `sim privacy --grant camera --bundle-id com.app` |
-| `sim push` | 推送通知 | `sim push --title "Hi" --body "Hello"` |
-| `sim clipboard` | 剪贴板 | `sim clipboard "text"` |
-| `sim statusbar` | 状态栏 | `sim statusbar --get` |
+- [Apple](https://apple.com) - Xcode & Simulator
+- [OpenCode](https://opencode.ai) - AI 编程助手
+- [idb-companion](https://github.com/facebook/idb) - iOS 自动化基础设施
 
-### 构建 (2)
+---
 
-| 命令 | 说明 | 示例 |
-|------|------|------|
-| `sim build` | 构建项目 | `sim build --project App.xcodeproj` |
-| `sim test` | 运行测试 | `sim test --project App.xcodeproj` |
+<div align="center">
 
-### 信息 (2)
+**⭐ 如果这个项目对你有帮助，请给我们一个 Star！**
 
-| 命令 | 说明 | 示例 |
-|------|------|------|
-| `sim check` | 环境检查 | `sim check` |
-| `sim booted` | 已启动设备 | `sim booted` |
+[![GitHub Stars](https://img.shields.io/github/stars/BOMBFUOCK/opencode-ios-simulator?style=social)](https://github.com/BOMBFUOCK/opencode-ios-simulator)
 
-## JSON 输出
+Made with ❤️ by [BOMBFUOCK](https://github.com/BOMBFUOCK)
 
-所有命令支持 `--json` 格式输出，方便程序解析：
-
-```bash
-# 列出模拟器（JSON 格式）
-sim list --json
-# 输出: {"simulators": [...], "count": 11}
-
-# 检查环境（JSON 格式）
-sim check --json
-# 输出: {"ready": true, "checks": {...}}
-```
-
-## 依赖
-
-- **操作系统**：macOS
-- **开发工具**：Xcode + Xcode Command Line Tools
-- **Python**：3.10+
-- **idb-companion**：`brew install idb-companion`
-- **Pillow**：用于视觉对比功能
-
-## 许可证
-
-MIT License
-
-## 问题反馈
-
-如果您遇到问题或有功能建议，请提交 [Issue](https://github.com/opencode-ai/opencode-ios-simulator/issues)。
+</div>
