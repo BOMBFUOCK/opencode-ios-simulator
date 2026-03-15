@@ -7,7 +7,7 @@ name = "opencode-ios-simulator"
 version = "1.0.0"
 description = "🤖 AI 时代的 iOS 模拟器自动化命令行工具 - 专为 AI Agent 和自动化工作流设计"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 authors = [
     {name = "BOMBFUOCK", email = "bombfuock@example.com"}
 ]
@@ -15,17 +15,11 @@ keywords = ["ios", "simulator", "automation", "idb", "xcrun", "testing", "ai", "
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "Intended Audience :: End Users/Desktop",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: MacOS",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Topic :: Software Development :: Testing",
-    "Topic :: Software Development :: Build Tools",
-    "Topic :: Software Development :: Utilities",
-    "Artificial Intelligence :: Testing",
 ]
 requires-python = ">=3.10"
 dependencies = [
